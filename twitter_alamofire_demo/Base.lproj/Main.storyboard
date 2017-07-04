@@ -185,7 +185,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="likesLabel" destination="BnP-hY-zP3" id="Kbw-V5-MTL"/>
+                                            <outlet property="nameLabel" destination="6Eq-ex-xyR" id="ThG-56-Cy8"/>
+                                            <outlet property="profilePic" destination="TFT-Xs-LC0" id="dsW-P6-ftw"/>
+                                            <outlet property="repliesLabel" destination="0kn-dU-mdP" id="yRt-Pt-NAV"/>
+                                            <outlet property="retweetsLabel" destination="H9s-Tz-eCh" id="f1w-NJ-jb4"/>
+                                            <outlet property="timeStampLabel" destination="DKb-do-beK" id="b1a-nx-MKm"/>
                                             <outlet property="tweetTextLabel" destination="epC-Fs-Q5Z" id="ZLP-IG-Wsf"/>
+                                            <outlet property="usernameLabel" destination="tJb-KM-xlZ" id="3n2-5i-eya"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
