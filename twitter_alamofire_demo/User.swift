@@ -42,7 +42,8 @@ class User {
         self.dictionary = dictionary
         name = dictionary["name"] as! String
         screenName = dictionary["screen_name"] as! String
-        profileURL = dictionary["profile_image_url_https"] as! URL
+        profileURL = URL(fileURLWithPath: dictionary["profile_image_url_https"] as! String)
+        
     }
     
 }

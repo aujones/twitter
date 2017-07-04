@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire
+import AlamofireImage
 
 class TweetCell: UITableViewCell {
     
@@ -33,7 +33,7 @@ class TweetCell: UITableViewCell {
             let currentuser = tweet.user
             usernameLabel.text = currentuser.screenName
             nameLabel.text = currentuser.name
-            profilePic.af_setImage(withURL: user.profilePic!)
+            profilePic.af_setImage(withURL: user.profileURL!)
             
             
         }
