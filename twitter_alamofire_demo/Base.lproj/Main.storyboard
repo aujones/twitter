@@ -32,6 +32,7 @@
                                 <state key="normal" title="Login with Twitter"/>
                                 <connections>
                                     <action selector="didTapLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wc4-g6-Ibs"/>
+                                    <segue destination="RFK-Vv-pWW" kind="presentation" identifier="loginSegue" id="Egv-ok-dOS"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="TwitterLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="yun-OK-dTN">
@@ -47,9 +48,6 @@
                             <constraint firstItem="buX-oa-Er5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yY6-dG-3Gv"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="RFK-Vv-pWW" kind="presentation" identifier="loginSegue" id="bSJ-ea-DmV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,6 +134,9 @@
                                                                     <state key="normal" image="retweet-icon"/>
                                                                     <state key="selected" image="retweet-icon-green"/>
                                                                     <state key="highlighted" image="retweet-icon-green"/>
+                                                                    <connections>
+                                                                        <action selector="tapRetweet:" destination="U1g-kw-izy" eventType="touchUpInside" id="E8t-2t-k87"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9s-Tz-eCh">
                                                                     <rect key="frame" x="30" y="0.0" width="25.5" height="30"/>
@@ -153,6 +154,9 @@
                                                                     <state key="normal" image="favor-icon"/>
                                                                     <state key="selected" image="favor-icon-red"/>
                                                                     <state key="highlighted" image="favor-icon-red"/>
+                                                                    <connections>
+                                                                        <action selector="tapLike:" destination="U1g-kw-izy" eventType="touchUpInside" id="EUY-BR-6xg"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnP-hY-zP3">
                                                                     <rect key="frame" x="30" y="0.0" width="25.5" height="30"/>
@@ -185,10 +189,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="likeButton" destination="Qxv-9u-Ll3" id="fzB-CY-2YO"/>
                                             <outlet property="likesLabel" destination="BnP-hY-zP3" id="Kbw-V5-MTL"/>
                                             <outlet property="nameLabel" destination="6Eq-ex-xyR" id="ThG-56-Cy8"/>
                                             <outlet property="profilePic" destination="TFT-Xs-LC0" id="dsW-P6-ftw"/>
                                             <outlet property="repliesLabel" destination="0kn-dU-mdP" id="yRt-Pt-NAV"/>
+                                            <outlet property="replyButton" destination="nea-mW-8Ml" id="opj-VU-Ikb"/>
+                                            <outlet property="retweetButton" destination="Tl1-kX-J8D" id="QKL-EB-ggE"/>
                                             <outlet property="retweetsLabel" destination="H9s-Tz-eCh" id="f1w-NJ-jb4"/>
                                             <outlet property="timeStampLabel" destination="DKb-do-beK" id="b1a-nx-MKm"/>
                                             <outlet property="tweetTextLabel" destination="epC-Fs-Q5Z" id="ZLP-IG-Wsf"/>
@@ -213,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlF-i2-Ves" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028" y="-31.03448275862069"/>
+            <point key="canvasLocation" x="1706" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WXZ-z8-8LI">
