@@ -8,8 +8,17 @@
 
 import UIKit
 
+protocol ComposeViewControllerDelegate {
+    func did(post: Tweet)
+}
+
 class ComposeViewController: UIViewController {
 
+    @IBOutlet weak var tweetTextField: UITextField!
+    
+    var delegate : ComposeViewControllerDelegate?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +30,26 @@ class ComposeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didCancelTweet(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
+    @IBAction func didSendTweet(_ sender: Any) {
+        let tweetText = tweetTextField.text
+        APIManager.shared.composeTweet(with: tweetText!) { (tweet, error) in
+            if let error = error {
+                print("Error composing Tweet: \(error.localizedDescription)")
+            } else if let tweet = tweet {
+                self.delegate?.did(post: tweet)
+                print("Compose Tweet Success!")
+            }
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func did(post: Tweet) {
+        
+    }
     /*
     // MARK: - Navigation
 

@@ -62,10 +62,6 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func didTapLogout(_ sender: Any) {
-        APIManager.shared.logout()
-    }
     
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
         APIManager.shared.getHomeTimeLine { (tweets, error) in
