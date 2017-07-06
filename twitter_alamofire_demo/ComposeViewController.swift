@@ -13,8 +13,8 @@ protocol ComposeViewControllerDelegate {
 }
 
 class ComposeViewController: UIViewController {
-
-    @IBOutlet weak var tweetTextField: UITextField!
+    
+    @IBOutlet weak var tweetTextField: UITextView!
     
     var delegate : ComposeViewControllerDelegate?
     
@@ -22,6 +22,8 @@ class ComposeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //delegate = self as? ComposeViewControllerDelegate
+        tweetTextField!.layer.borderWidth = 1
+        tweetTextField!.layer.borderColor = UIColor.gray.cgColor
         
 
         // Do any additional setup after loading the view.
