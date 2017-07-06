@@ -7,11 +7,34 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
+    @IBOutlet weak var profilePicture: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var followingLabel: UILabel!
+    
+    @IBOutlet weak var followersLabel: UILabel!
+    
+    var user : User = User.current!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = user.name
+        usernameLabel.text = "@\(user.screenName)"
+        followingLabel.text = "\(user.following)"
+        followersLabel.text = "\(user.followers)"
+        if(user.backgroundURL != nil) {
+            backgroundImageView.af_setImage(withURL: user.backgroundURL!)
+        }
+        profilePicture.af_setImage(withURL: user.profileURL)
 
         // Do any additional setup after loading the view.
     }

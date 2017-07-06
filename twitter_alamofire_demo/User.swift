@@ -14,6 +14,9 @@ class User {
     var name: String
     var screenName : String
     var profileURL : URL
+    var following : Int
+    var followers : Int
+    var backgroundURL : URL?
     private static var _current: User?
     static var current: User? {
         get {
@@ -43,6 +46,13 @@ class User {
         name = dictionary["name"] as! String
         screenName = dictionary["screen_name"] as! String
         profileURL = URL(string: dictionary["profile_image_url_https"] as! String)!
+        following = dictionary["friends_count"] as! Int
+        followers = dictionary["followers_count"] as! Int
+        //if((dictionary["profile_background_image_url_https"]) != nil) {
+           // backgroundURL = URL(string: dictionary["profile_background_image_url_https"] as! String)!
+        //} else {
+          //  backgroundURL = nil
+        //}
         
     }
     
