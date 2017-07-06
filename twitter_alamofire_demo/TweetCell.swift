@@ -33,7 +33,6 @@ class TweetCell: UITableViewCell {
     
     @IBOutlet weak var likeButton: UIButton!
     
-    
     var tweet: Tweet! {
         didSet {
             tweetTextLabel.text = tweet.text
@@ -45,19 +44,35 @@ class TweetCell: UITableViewCell {
             retweetsLabel.text = "\(tweet.retweetCount)"
             likesLabel.text = "\(tweet.favoriteCount ?? 0)"
             timeStampLabel.text = tweet.createdAtString
+            likeButton.isSelected = tweet.favorited!
+            retweetButton.isSelected = tweet.retweeted
+            
         }
     }
     
     @IBAction func tapRetweet(_ sender: Any) {
-        if(retweetButton.isSelected) {
-            retweetButton.isSelected = false
+        if(tweet.retweeted) {
             tweet.retweetCount -= 1
             tweet.retweeted = false
+            APIManager.shared.unretweet(tweet) { (tweet: Tweet?, error: Error?) in
+                if let  error = error {
+                    print("Error unretweeting tweet: \(error.localizedDescription)")
+                } else if let tweet = tweet {
+                    print("Successfully unretweeted the following Tweet: \n\(tweet.text)")
+                }
+            }
         }
         else {
-            retweetButton.isSelected = true
             tweet.retweetCount += 1
             tweet.retweeted = true
+            APIManager.shared.retweet(tweet) { (tweet: Tweet?, error: Error?) in
+                if let  error = error {
+                    print("Error retweeting tweet: \(error.localizedDescription)")
+                } else if let tweet = tweet {
+                    print("Successfully retweeted the following Tweet: \n\(tweet.text)")
+                }
+            }
+                
         }
         refreshData()
         
@@ -65,8 +80,7 @@ class TweetCell: UITableViewCell {
     }
     
     @IBAction func tapLike(_ sender: Any) {
-        if(likeButton.isSelected) {
-            likeButton.isSelected = false
+        if(tweet.favorited)! {
             tweet.favoriteCount? -= 1
             tweet.favorited = false
             APIManager.shared.unfavorite(tweet) { (tweet: Tweet?, error: Error?) in
@@ -77,7 +91,6 @@ class TweetCell: UITableViewCell {
                 }
             }
         }else {
-            likeButton.isSelected = true
             tweet.favoriteCount? += 1
             tweet.favorited = true
             APIManager.shared.favorite(tweet) { (tweet: Tweet?, error: Error?) in
@@ -88,7 +101,7 @@ class TweetCell: UITableViewCell {
                 }
             }
         }
-        refreshData()
+       refreshData()
     }
     
     override func awakeFromNib() {
@@ -108,6 +121,8 @@ class TweetCell: UITableViewCell {
     func refreshData() {
         retweetsLabel.text = "\(tweet.retweetCount)"
         likesLabel.text = "\(tweet.favoriteCount ?? 0)"
+        likeButton.isSelected = tweet.favorited!
+        retweetButton.isSelected = tweet.retweeted
         
         
     }
