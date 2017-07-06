@@ -44,11 +44,11 @@ class ComposeViewController: UIViewController {
                 print("Compose Tweet Success!")
             }
         }
-        self.dismiss(animated: true, completion: nil)
     }
     
     func did(post: Tweet) {
-        
+        self.dismiss(animated: true, completion: nil)
+        tweetTextField.text = ""
     }
     /*
     // MARK: - Navigation
