@@ -21,6 +21,8 @@ class ComposeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //delegate = self as? ComposeViewControllerDelegate
+        
 
         // Do any additional setup after loading the view.
     }
@@ -41,6 +43,8 @@ class ComposeViewController: UIViewController {
                 print("Error composing Tweet: \(error.localizedDescription)")
             } else if let tweet = tweet {
                 self.delegate?.did(post: tweet)
+                self.dismiss(animated: true, completion: nil)
+                self.tweetTextField.text = ""
                 print("Compose Tweet Success!")
             }
         }
