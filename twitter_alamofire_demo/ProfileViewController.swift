@@ -40,6 +40,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             backgroundImageView.af_setImage(withURL: user.backgroundURL!)
         }
         profilePicture.af_setImage(withURL: user.profileURL)
+        
+        APIManager.shared.getUserTimeLine { (tweets, error) in
+            if let tweets = tweets {
+                self.tweets = tweets
+                self.tableView.reloadData()
+            } else if let error = error {
+                print("Error getting user timeline: " + error.localizedDescription)
+            }
+        }
 
     }
 
@@ -50,6 +59,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func didTapLogout(_ sender: Any) {
         APIManager.shared.logout()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
