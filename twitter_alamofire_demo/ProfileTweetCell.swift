@@ -39,7 +39,7 @@ class ProfileTweetCell: UITableViewCell {
             tweetTextLabel.text = tweet.text
             numReplies.text = ""
             numRetweets.text = "\(tweet.retweetCount)"
-            numFavorites.text = "\(tweet.favoriteCount)"
+            numFavorites.text = "\(tweet.favoriteCount ?? 0)"
             nameLabel.text = currentuser.name
         }
     }
