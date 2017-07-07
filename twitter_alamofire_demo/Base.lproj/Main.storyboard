@@ -334,7 +334,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="cpc-4Y-hTg" customClass="ProfileTweetCell" customModule="twitter_alamofire_demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProfileTweetCell" selectionStyle="default" indentationWidth="10" rowHeight="109" id="cpc-4Y-hTg" customClass="ProfileTweetCell" customModule="twitter_alamofire_demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cpc-4Y-hTg" id="Gss-Xc-eGS">
@@ -366,24 +366,24 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i luv tweeting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk1-Qa-G4a">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk1-Qa-G4a">
                                                     <rect key="frame" x="66" y="36.5" width="293" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="MHU-uK-s03">
-                                                    <rect key="frame" x="66" y="64.5" width="293" height="28"/>
+                                                    <rect key="frame" x="66" y="65" width="293" height="27.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="3GO-Qh-m4f">
-                                                            <rect key="frame" x="0.0" y="0.0" width="55.5" height="28"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="55.5" height="27.5"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUP-A2-gjY">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="28"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="27.5"/>
                                                                     <state key="normal" image="reply-icon"/>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14z-Er-TJd">
-                                                                    <rect key="frame" x="30" y="0.0" width="25.5" height="28"/>
+                                                                    <rect key="frame" x="30" y="0.0" width="25.5" height="27.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -391,15 +391,15 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pV7-hR-Me2">
-                                                            <rect key="frame" x="119" y="0.0" width="55.5" height="28"/>
+                                                            <rect key="frame" x="119" y="0.0" width="55.5" height="27.5"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lio-tc-hw1">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="28"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="27.5"/>
                                                                     <state key="normal" image="retweet-icon"/>
                                                                     <state key="selected" image="retweet-icon-green"/>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5j-9g-2bH">
-                                                                    <rect key="frame" x="30" y="0.0" width="25.5" height="28"/>
+                                                                    <rect key="frame" x="30" y="0.0" width="25.5" height="27.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -407,15 +407,15 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="mto-IA-92I">
-                                                            <rect key="frame" x="237.5" y="0.0" width="55.5" height="28"/>
+                                                            <rect key="frame" x="237.5" y="0.0" width="55.5" height="27.5"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hg9-6y-4jz">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="28"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="27.5"/>
                                                                     <state key="normal" image="favor-icon"/>
                                                                     <state key="selected" image="favor-icon-red"/>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmm-6J-kqJ">
-                                                                    <rect key="frame" x="30" y="0.0" width="25.5" height="28"/>
+                                                                    <rect key="frame" x="30" y="0.0" width="25.5" height="27.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -444,6 +444,16 @@
                                                 <constraint firstItem="rk1-Qa-G4a" firstAttribute="leading" secondItem="BIf-eH-mYH" secondAttribute="leading" id="rsQ-oQ-snO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="BIf-eH-mYH" id="V9P-rd-5SG"/>
+                                            <outlet property="numFavorites" destination="nmm-6J-kqJ" id="9fP-x6-pe7"/>
+                                            <outlet property="numReplies" destination="14z-Er-TJd" id="HaB-JR-Jlm"/>
+                                            <outlet property="numRetweets" destination="r5j-9g-2bH" id="JQV-iq-znz"/>
+                                            <outlet property="profilePic" destination="zKQ-CD-UtG" id="pOa-BF-P4F"/>
+                                            <outlet property="timeStampLabel" destination="TOW-rI-S4K" id="bv9-Af-NiX"/>
+                                            <outlet property="tweetTextLabel" destination="rk1-Qa-G4a" id="dmc-Gi-4FE"/>
+                                            <outlet property="usernameLabel" destination="TgS-5p-Gk3" id="Abc-Bv-sLM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -517,6 +527,7 @@
                         <outlet property="followingLabel" destination="z79-4C-taE" id="dPv-TV-Y6p"/>
                         <outlet property="nameLabel" destination="4dU-WN-7TV" id="yIV-Gh-Vlb"/>
                         <outlet property="profilePicture" destination="cX9-X5-Me5" id="QOs-W6-NH8"/>
+                        <outlet property="tableView" destination="KA2-Wm-mRe" id="YJu-Mp-Ug4"/>
                         <outlet property="usernameLabel" destination="lM3-iP-uVN" id="oeg-zT-Hyj"/>
                     </connections>
                 </viewController>

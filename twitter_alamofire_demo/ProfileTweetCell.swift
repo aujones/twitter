@@ -10,9 +10,37 @@ import UIKit
 
 class ProfileTweetCell: UITableViewCell {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var timeStampLabel: UILabel!
+    
+    @IBOutlet weak var tweetTextLabel: UILabel!
+    
+    @IBOutlet weak var numReplies: UILabel!
+    
+    @IBOutlet weak var numRetweets: UILabel!
+    
+    @IBOutlet weak var numFavorites: UILabel!
+    
+    @IBOutlet weak var profilePic: UIImageView!
+    
+    var user : User = User.current!
+    
+    
     var tweet : Tweet! {
         didSet {
-            // update UI view (outlets)
+            let currentuser = tweet.user
+            profilePic.af_setImage(withURL: currentuser.profileURL)
+            usernameLabel.text = currentuser.screenName
+            timeStampLabel.text = tweet.createdAtString
+            
+            tweetTextLabel.text = tweet.text
+            numReplies.text = ""
+            numRetweets.text = "\(tweet.retweetCount)"
+            numFavorites.text = "\(tweet.favoriteCount)"
+            nameLabel.text = currentuser.name
         }
     }
 
