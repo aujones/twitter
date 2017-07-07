@@ -367,7 +367,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I love tweeting!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccl-in-mtv">
-                                                    <rect key="frame" x="66" y="36.5" width="293" height="20.5"/>
+                                                    <rect key="frame" x="66" y="36.5" width="115" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -441,7 +441,7 @@
                                                 <constraint firstItem="V53-W1-N2N" firstAttribute="top" secondItem="mkT-Gu-hW8" secondAttribute="top" id="E5M-WX-ejT"/>
                                                 <constraint firstItem="mkT-Gu-hW8" firstAttribute="top" secondItem="5LJ-Jg-E45" secondAttribute="top" constant="8" id="Etx-Vp-sLG"/>
                                                 <constraint firstItem="XGH-6d-3SL" firstAttribute="centerY" secondItem="V53-W1-N2N" secondAttribute="centerY" id="HgJ-RG-Aft"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ccl-in-mtv" secondAttribute="trailing" constant="8" id="Lxg-9O-Btg"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ccl-in-mtv" secondAttribute="trailing" constant="8" id="Lxg-9O-Btg"/>
                                                 <constraint firstItem="1I3-Jk-RB8" firstAttribute="leading" secondItem="XGH-6d-3SL" secondAttribute="trailing" constant="8" id="OMb-fF-VXh"/>
                                                 <constraint firstItem="mkT-Gu-hW8" firstAttribute="leading" secondItem="5LJ-Jg-E45" secondAttribute="leading" constant="8" id="PBC-S2-9Fg"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ajq-Jl-oaF" secondAttribute="bottom" constant="8" id="R2d-Wb-mpF"/>
@@ -477,15 +477,15 @@
                                 <rect key="frame" x="16" y="60" width="84" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Audrey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dU-WN-7TV">
-                                <rect key="frame" x="16" y="149" width="63" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dU-WN-7TV">
+                                <rect key="frame" x="16" y="149" width="130" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@audreyjones28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM3-iP-uVN">
-                                <rect key="frame" x="16" y="170" width="102" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM3-iP-uVN">
+                                <rect key="frame" x="16" y="170" width="110" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

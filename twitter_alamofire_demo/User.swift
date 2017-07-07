@@ -48,11 +48,8 @@ class User {
         profileURL = URL(string: dictionary["profile_image_url_https"] as! String)!
         following = dictionary["friends_count"] as! Int
         followers = dictionary["followers_count"] as! Int
-        //if((dictionary["profile_background_image_url_https"]) != nil) {
-           // backgroundURL = URL(string: dictionary["profile_background_image_url_https"] as! String)!
-        //} else {
-          //  backgroundURL = nil
-        //}
+        backgroundURL = URL(string: dictionary["profile_banner_url"] as! String)!
+
         
     }
     

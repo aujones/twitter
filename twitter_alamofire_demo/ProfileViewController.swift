@@ -24,7 +24,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var followersLabel: UILabel!
     
-    var user : User = User.current!
     var tweets : [Tweet] = []
 
     override func viewDidLoad() {
@@ -32,14 +31,16 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         tableView.dataSource = self
         tableView.delegate = self
-        nameLabel.text = user.name
-        usernameLabel.text = "@\(user.screenName)"
-        followingLabel.text = "\(user.following)"
-        followersLabel.text = "\(user.followers)"
-        if(user.backgroundURL != nil) {
-            backgroundImageView.af_setImage(withURL: user.backgroundURL!)
+        let currentuser = User.current
+        nameLabel.text = currentuser?.name
+        usernameLabel.text = "@\(currentuser?.screenName ?? "")"
+        followingLabel.text = "\(currentuser?.following ?? 0)"
+        followersLabel.text = "\(currentuser?.followers ?? 0)"
+        if(currentuser?.backgroundURL != nil) {
+            backgroundImageView.af_setImage(withURL: (currentuser?.backgroundURL!)!)
         }
-        profilePicture.af_setImage(withURL: user.profileURL)
+        profilePicture.af_setImage(withURL: (currentuser?.profileURL)!)
+        
         
         APIManager.shared.getUserTimeLine { (tweets, error) in
             if let tweets = tweets {
