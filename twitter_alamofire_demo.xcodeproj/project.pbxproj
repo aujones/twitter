@@ -162,7 +162,6 @@
 				EDC4B7361E98627100D836AC /* twitter_alamofire_demo.entitlements */,
 				ED1AFD301E942B2500FD4B90 /* AppDelegate.swift */,
 				ED1AFD371E942B2500FD4B90 /* Assets.xcassets */,
-				812B4A0E1F1070DF001138A7 /* twitter_demo.gif */,
 				ED1AFD391E942B2500FD4B90 /* LaunchScreen.storyboard */,
 				ED1AFD3C1E942B2500FD4B90 /* Info.plist */,
 			);
@@ -190,6 +189,7 @@
 		ED1D23491EF6E38100C51ACC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				812B4A0E1F1070DF001138A7 /* twitter_demo.gif */,
 				ED1D23451EF63C1D00C51ACC /* User.swift */,
 				ED1D23471EF6E37700C51ACC /* Tweet.swift */,
 			);
