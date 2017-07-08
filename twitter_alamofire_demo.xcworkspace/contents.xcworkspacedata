@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../Documents/twitter_demo.gif">
+   </FileRef>
+   <FileRef
       location = "group:twitter_alamofire_demo.xcodeproj">
    </FileRef>
    <FileRef
